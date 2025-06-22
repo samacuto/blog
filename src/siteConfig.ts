@@ -18,14 +18,6 @@ export const NAV_LINKS: NavigationLinks = {
     path: '/blog',
     label: 'Blog',
   },
-  projects: {
-    path: '/projects',
-    label: 'Projects',
-  },
-  documentation: {
-    path: 'https://docs.superwebthemes.com',
-    label: 'Documentation',
-  },
 }
 
 export const SOCIAL_LINKS: SocialLinks = {
