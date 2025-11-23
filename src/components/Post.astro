@@ -1,19 +1,19 @@
 ---
 import { formatDate } from '@/lib/util'
+import PostPreview from '@/components/PostPreview.astro'
 
 const { post } = Astro.props
 ---
 
-<li>
-    <a
-        href={`/blog/${post.id}`}
-        class="link flex w-full flex-col sm:flex-row sm:items-center sm:justify-between"
-    >
-        <span>{post.data.title}</span>
-        <div
-            class="text-muted-text dark:text-dark-muted-text text-sm font-normal decoration-0"
-        >
-            {formatDate(post.data.publicationDate)}
-        </div>
-    </a>
+<li class="relative flex items-center justify-between">
+  <a href={`/${post.id}`} class="group link relative">
+    <span>{post.data.title}</span>
+
+    <!-- Tooltip -->
+    <PostPreview post={post} />
+  </a>
+
+  <span class="text-muted-text dark:text-dark-muted-text text-sm font-normal">
+    {formatDate(post.data.publicationDate)}
+  </span>
 </li>
