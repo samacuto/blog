@@ -1,7 +1,10 @@
 ---
 import BaseLayout from '@/layouts/BaseLayout.astro'
+import Posts from '@/components/Posts.astro'
+import SeoPage from '@/components/SeoPage.astro'
 ---
 
 <BaseLayout>
-  <p>Hola Mundo</p>
+  <SeoPage slot="head" title="Blog de samacuto" />
+  <Posts />
 </BaseLayout>
